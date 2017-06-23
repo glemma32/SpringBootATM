@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+      <title>Chef List</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Latest compiled and minified CSS -->
+  </head>
+<body>
+<form action="#" th:action="@{/withdraw}" th:object="${withdraw}" method="post" class="navbar-form navbar-left">
+  
+  <div class="form-group">
+    <input type="text" th:field="*{acctNumber}" placeholder="Account Number"></input>  
+  </div>
+  <!-- 
+    <select th:field="*{action}">
+    <option value="default">Select action</option>
+    <option th:each="${action}" th:value="${action}"th:text="${action}"/>
+	</select>
+	---> 
+	 <div class="form-group">
+	  <input type="text" th:field="*{option}" placeholder="withdraw"></input>
+	  </div>
+	   <div class="form-group">
+    <input type="text" th:field="*{reason}" placeholder="Reason for withdrawal"></input>
+  	</div>
+  	<div class="form-group">
+    <input type="text" th:field="*{withdrawAmount}" placeholder="Amount"></input>
+  	</div>
+  	<button type="submit" class="btn btn-default">Submit</button>
+ 
+</form>
+</body>
+</html>
